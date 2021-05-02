@@ -30,7 +30,8 @@ form.addEventListener('submit',(event) => {
     let model = modelInput.value;
     let year = yearInput.value;
 
-    let new car = Car(make,model,year);
+    let car = new Car(make,model,year);
     wishlist.add(car);
     console.log(wishlist.list);
+    wishlist.updateDOM(car);
 });
